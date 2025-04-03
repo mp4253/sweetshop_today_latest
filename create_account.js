@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function check(){
 
-    var a = document.getElementById('pass_word');
+    var a = document.getElementById('third_field');
 
     var b = document.getElementById('checking_checkbox');
 
@@ -70,18 +70,46 @@ function check(){
 
 
 
+// let typingTimer;
+// const typingDelay = 500;
+
+// function spinning() {
+//     let password_loader = document.getElementById("loader");
+//     let password = document.getElementById("pass_word");
+
+//     loader.style.opacity = "1";
+
+//     clearTimeout(typingTimer);
+
+//     typingTimer = setTimeout(() => {
+//         loader.style.opacity = "0";
+//     }, typingDelay);
+// }
+
+
 let typingTimer;
 const typingDelay = 500;
 
-function spinning() {
-    let loader = document.getElementById("loader");
-    let password = document.getElementById("pass_word");
+function spinning(loaderId) {
+    let loader = document.getElementById(loaderId);
+
+    if (!loader) return;
 
     loader.style.opacity = "1";
 
     clearTimeout(typingTimer);
 
     typingTimer = setTimeout(() => {
-        loader.style.opacity = "0";
+        loader.style.opacity = "0"; 
     }, typingDelay);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("third_field").addEventListener("input", function () {
+        spinning("password_loader");
+    });
+
+    document.getElementById("fourth_field").addEventListener("input", function () {
+        spinning("confirm_password_loader");
+    });
+});
