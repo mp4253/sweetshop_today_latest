@@ -17,42 +17,62 @@
 <body>
     
     <div class="create_account">
+
         <h1 class="main_heading">Create Account</h1>
 
         <form id="createAccountForm" action="create_account.php" method="post">
 
-            <label for="first_field">Username:</label>
+            <label for="first_field" id="username">Username:</label>
+
+            <br>
             
             <input type="text" id="first_field" name="usernooname" placeholder="Enter Username" required autocomplete="username">
 
-            <label for="second_field">Email:</label>
+            <br>
+
+            <label for="second_field" id="email">Email:</label>
+
+            <br>
+
             <input type="email" id="second_field" name="usernooemailing" placeholder="Enter Email" required>
 
-            <label for="third_field">Password:</label>
+            <br>
+
+            <label for="third_field" id="password">Password:</label>
+            
+            <br>
+            
+            <div class="password-container">
+
+                <input type="password" id="third_field" name="usernoopassword" placeholder="Enter Password" 
+                required autocomplete="new-password" />
+
+
+                <i class="fas fa-spinner fa-flip-both fa-lg fa-spin" id="password_loader" ></i>
+
+
+                <input type="checkbox" id="checking_checkbox" onclick="check()" />
+                
+
+            </div>
+
         
-            <input type="password" id="pass_word" name="usernoopassword" placeholder="Enter Password" 
-            required />
+            <label for="fourth_field" id="confirm_password">Confirm Password:</label>
 
-            <input type="checkbox" id="checking_checkbox" onclick="check()" />
-            
-            <br>
-
-            <!-- <i class="fas fa-spinner fa-flip-both fa-lg fa-spin" id="loader">
-            </i> -->
+            <div class="confirm-password-container">
+                
+                <input type="password" id="fourth_field" name="usernooconfirmpassword" placeholder="Enter Confirm Password"
+                required autocomplete="new-password" />
 
 
-            <label for="fourth_field">Confirm Password:</label>
-
-            <input type="password" id="fourth_field" name="usernooconfirmpassword" placeholder="Enter Confirm Password"
-            required />
-
-            <input type="checkbox" id="confirm_checking_checkbox" onclick="check()" />
-            
-            <br>
+                <i class="fas fa-spinner fa-flip-both fa-lg fa-spin" id="confirm_password_loader"></i>
 
 
-            <!-- <i class="fas fa-spinner fa-flip-both fa-lg fa-spin" id="loader">
-            </i> -->
+                <input type="checkbox" id="confirm_checking_checkbox" onclick="check()" />
+                
+
+            </div>
+
 
             <button type="submit" id="submit_btn" value="submit">Submit</button>
         </form>
@@ -66,4 +86,5 @@
     </div>
 
 </body>
+
 </html>
