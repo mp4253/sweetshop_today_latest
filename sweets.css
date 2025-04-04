@@ -493,6 +493,11 @@
     .navbar_container {
       width: 100%;
     }
+
+
+    .hamburger {
+    display: inline-block;
+  }
   
   
     #menu_list {
