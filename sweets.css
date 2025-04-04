@@ -49,7 +49,7 @@ body {
   z-index: 10;
 }
 
-/* Search Bar & Container */
+
 #search_container {
   display: flex;
   align-items: center;
@@ -72,7 +72,8 @@ body {
   margin-top: 2px;
   width: 85px;
   height: 32px;
-  background-color: white;
+  color: white;
+  background-color: orange;
   font-size: large;
   cursor: pointer;
   border: none;
